@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os, sys
-from distutils.core import setup
-from distutils.command.install import install as _install
+from setuptools import setup
+from setuptools.command.install import install as _install
 
 
 def _post_install(dir):
