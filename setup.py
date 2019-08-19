@@ -5,7 +5,8 @@ from distutils.command.install import install as _install
 
 
 def _post_install(dir):
-    os.system("pybenchmark")
+    #os.system("pybenchmark")
+    print("NOTHING")
 
 class install(_install):
     def run(self):

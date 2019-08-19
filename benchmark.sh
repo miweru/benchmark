@@ -1,5 +1,5 @@
-#!/usr/sys/env bash
+#!/usr/bin/env bash
 tmp_dir=$(mktemp -d -t ci-XXXXXXXXXX)
-/usr/sys/env python3 -m venv $tmp_dir
+/usr/bin/env python3 -m venv $tmp_dir
 source $tmp_dir/bin/activate
-pip install git+https://github.com/miweru/benchmark
+pip install -U setuptools wheel git+https://github.com/miweru/benchmark
