@@ -9,6 +9,8 @@ from scipy.sparse import lil_matrix
 from sklearn.decomposition import TruncatedSVD
 from somajo import Tokenizer
 
+
+
 def b1():
     t=time()
     words = ["".join(random.choices(string.ascii_letters, k=5)) for _ in range(10000000)]
@@ -44,5 +46,7 @@ def benchmark(*args,**kwargs):
     print("="*30)
     print("Count Words and build dict")
     cProfile.run("b3()")
+
+benchmark()
 
 setup = benchmark
