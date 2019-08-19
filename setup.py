@@ -5,10 +5,7 @@ from distutils.command.install import install as _install
 
 
 def _post_install(dir):
-    from subprocess import call
-    call(['pybenchmark'],
-         cwd=os.path.join(dir, 'packagename'))
-
+    os.system("pybenchmark")
 
 class install(_install):
     def run(self):
