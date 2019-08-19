@@ -11,6 +11,9 @@ from somajo import Tokenizer
 
 random.seed(42)
 
+_print = print
+def print(*args,**kwargs):
+    _print(" ".join(args).split("\n")[0],**kwargs)
 
 def b1():
     t=time()
