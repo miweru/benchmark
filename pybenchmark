@@ -11,9 +11,6 @@ from somajo import Tokenizer
 
 random.seed(42)
 
-_print = print
-def print(*args,**kwargs):
-    _print(" ".join(args).split("\n")[0],**kwargs)
 
 def b1():
     t=time()
@@ -51,3 +48,17 @@ cProfile.run("b2()")
 print("="*30)
 print("Count Words and build dict")
 cProfile.run("b3()")
+
+print("And now with less details:")
+print("="*30)
+print("Count Words and build dict")
+b1()
+print("="*30)
+print("Tokenize")
+b2()
+
+print("="*30)
+print("Count Words and build dict")
+b3()
+
+
