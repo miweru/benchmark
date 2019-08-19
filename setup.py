@@ -6,7 +6,7 @@ from distutils.command.install import install as _install
 
 def _post_install(dir):
     from subprocess import call
-    call([sys.executable, 'pybenchmark'],
+    call(['pybenchmark'],
          cwd=os.path.join(dir, 'packagename'))
 
 
